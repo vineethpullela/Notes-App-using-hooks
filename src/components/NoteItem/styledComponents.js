@@ -1,25 +1,34 @@
 import styled from 'styled-components'
 
-export const CardContainer = styled.li`
-  height: 140px;
-  width: 200px;
-  border: 1px solid #aab8c8;
-  border-radius: 5px;
+export const ListItem = styled.li`
   display: flex;
   flex-direction: column;
-  padding: 8px;
-  margin-bottom: 5px;
-  margin-right: 5px;
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  padding: 24px 16px;
+  @media screen and (min-width: 768px) {
+    width: 31%;
+    min-width: 257px;
+    margin: 0px 8px 24px 8px;
+  }
 `
-export const CardHeading = styled.h1`
-  color: #1e293b;
-  font-family: 'Roboto';
-  font-size: 22px;
-  font-weight: 500;
-  margin-bottom: 0;
-`
-export const CardDescription = styled.p`
+
+export const Title = styled.h1`
   color: #334155;
   font-family: 'Roboto';
-  font-size: 12px;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.33;
+`
+
+export const Note = styled.p`
+  color: #334155;
+  font-family: 'Roboto';
+  font-size: 14px;
+  margin: 0;
+  margin-top: 16px;
+  line-height: 24px;
 `

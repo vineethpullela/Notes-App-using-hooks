@@ -1,13 +1,15 @@
-import {CardContainer, CardHeading, CardDescription} from './styledComponents'
+import {ListItem, Title, Note} from './styledComponents'
 
-const NotesItem = () => (
-  <CardContainer>
-    <CardHeading>React</CardHeading>
-    <CardDescription>
-      Python is an easy to learn , powerful programming language with Python.
-      its is possible to create programs with minimal amount of code.
-    </CardDescription>
-  </CardContainer>
-)
+const NoteItem = props => {
+  const {noteDetails} = props
+  const {title, noteText} = noteDetails
 
-export default NotesItem
+  return (
+    <ListItem>
+      <Title>{title}</Title>
+      <Note>{noteText}</Note>
+    </ListItem>
+  )
+}
+
+export default NoteItem
